@@ -5,7 +5,7 @@ defmodule GRPC.Adapter.Gun do
   # conn_pid and stream_ref is stored in `GRPC.Server.Stream`.
 
   @default_transport_opts [nodelay: true]
-  @default_http2_opts %{settings_timeout: :infinity}
+  @default_http2_opts %{}
   @max_retries 100
 
   @spec connect(GRPC.Channel.t(), any) :: {:ok, GRPC.Channel.t()} | {:error, any}
